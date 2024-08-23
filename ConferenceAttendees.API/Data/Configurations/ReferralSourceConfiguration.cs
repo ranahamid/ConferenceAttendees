@@ -16,7 +16,7 @@ namespace ConferenceAttendees.API.Data.Configurations
                     new ReferralSource
                     {
                         Id = new Guid("5295ecec-bb38-48f0-b6ab-f51ad57d38bd"),
-                        Name = ""Television",
+                        Name = "Television",
                     },
 
 
@@ -29,7 +29,7 @@ namespace ConferenceAttendees.API.Data.Configurations
                     {
                         Id = new Guid("f2118fcd-7413-42f7-b4cc-a2f6089145c4"),
                         Name = "Other",
-                    },
+                    }
                 );
 
         }

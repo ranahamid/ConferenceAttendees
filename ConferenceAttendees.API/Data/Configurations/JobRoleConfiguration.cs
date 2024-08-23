@@ -29,7 +29,7 @@ namespace ConferenceAttendees.API.Data.Configurations
                     {
                         Id = new Guid("14c05cd3-7064-46b4-9d61-d003942d4c05"),
                         Name = "Operations"
-                    },
+                    }
                 );
 
         }

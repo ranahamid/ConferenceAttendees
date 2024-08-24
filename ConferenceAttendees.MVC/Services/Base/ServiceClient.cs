@@ -34,12 +34,12 @@ namespace ConferenceAttendees.MVC.Services.Base
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<System.Collections.Generic.ICollection<Atendee>> AtendeesAllAsync(System.Threading.CancellationToken cancellationToken);
 
-        /// <returns>Success</returns>
+        /// <returns>Created</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<Atendee> AtendeesPOSTAsync(Atendee body);
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <returns>Success</returns>
+        /// <returns>Created</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<Atendee> AtendeesPOSTAsync(Atendee body, System.Threading.CancellationToken cancellationToken);
 
@@ -326,7 +326,7 @@ namespace ConferenceAttendees.MVC.Services.Base
             }
         }
 
-        /// <returns>Success</returns>
+        /// <returns>Created</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public virtual System.Threading.Tasks.Task<Atendee> AtendeesPOSTAsync(Atendee body)
         {
@@ -334,7 +334,7 @@ namespace ConferenceAttendees.MVC.Services.Base
         }
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <returns>Success</returns>
+        /// <returns>Created</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public virtual async System.Threading.Tasks.Task<Atendee> AtendeesPOSTAsync(Atendee body, System.Threading.CancellationToken cancellationToken)
         {
@@ -379,7 +379,7 @@ namespace ConferenceAttendees.MVC.Services.Base
                         ProcessResponse(client_, response_);
 
                         var status_ = (int)response_.StatusCode;
-                        if (status_ == 200)
+                        if (status_ == 201)
                         {
                             var objectResponse_ = await ReadObjectResponseAsync<Atendee>(response_, headers_, cancellationToken).ConfigureAwait(false);
                             if (objectResponse_.Object == null)
@@ -2056,20 +2056,11 @@ namespace ConferenceAttendees.MVC.Services.Base
         [System.ComponentModel.DataAnnotations.StringLength(150)]
         public string CompanyName { get; set; }
 
-        [Newtonsoft.Json.JsonProperty("referralSource", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ReferralSource ReferralSource { get; set; }
-
         [Newtonsoft.Json.JsonProperty("referralSourceId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Guid ReferralSourceId { get; set; }
 
-        [Newtonsoft.Json.JsonProperty("jobRole", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public JobRole JobRole { get; set; }
-
         [Newtonsoft.Json.JsonProperty("jobRoleId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Guid JobRoleId { get; set; }
-
-        [Newtonsoft.Json.JsonProperty("gender", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public Gender Gender { get; set; }
 
         [Newtonsoft.Json.JsonProperty("genderId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Guid GenderId { get; set; }

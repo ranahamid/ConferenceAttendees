@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConferenceAttendees.API", "ConferenceAttendees.API\ConferenceAttendees.API.csproj", "{617E2BAA-F4F8-493C-BE3E-A7F7CD2BFFB2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConferenceAttendees.MVC", "ConferenceAttendees.MVC\ConferenceAttendees.MVC.csproj", "{055FF64E-7124-4EE7-9537-C5F095FA3C20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{617E2BAA-F4F8-493C-BE3E-A7F7CD2BFFB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{617E2BAA-F4F8-493C-BE3E-A7F7CD2BFFB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{617E2BAA-F4F8-493C-BE3E-A7F7CD2BFFB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{055FF64E-7124-4EE7-9537-C5F095FA3C20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{055FF64E-7124-4EE7-9537-C5F095FA3C20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{055FF64E-7124-4EE7-9537-C5F095FA3C20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{055FF64E-7124-4EE7-9537-C5F095FA3C20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

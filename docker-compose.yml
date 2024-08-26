@@ -9,8 +9,11 @@ services:
     environment:
         - ASPNETCORE_URLS=http://*:7293
     depends_on:  [mssql,seq]
-        
-  conferenceattendees.mvc:
+    networks:
+      - app-network
+
+
+  conferenceattendees.mvc: 
     image: ${DOCKER_REGISTRY-}conferenceattendeesmvc
     build:
       context: .
@@ -21,6 +24,10 @@ services:
         - ASPNETCORE_URLS=http://*:7187
     depends_on:  
         - conferenceattendees.api
+    networks:
+      - app-network
+  
+
   mssql:
     image: "mcr.microsoft.com/mssql/server"
     container_name: sql2
@@ -31,6 +38,10 @@ services:
     restart: unless-stopped
     ports:
       - "1400:1433"
+    networks:
+      - app-network
+
+
   seq:
     image: datalust/seq
     restart: unless-stopped
@@ -38,3 +49,24 @@ services:
       - "5342:80"
     environment:
       - ACCEPT_EULA=Y
+    networks:
+      - app-network
+ 
+
+
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile  
+    ports:
+      - "8083:8083"
+    depends_on:
+      - conferenceattendees.mvc    
+    restart: always
+    networks:
+      - app-network
+ 
+
+networks:
+  app-network:
+    driver: bridge

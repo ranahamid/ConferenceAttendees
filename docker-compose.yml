@@ -1,0 +1,21 @@
+services:
+  conferenceattendees.api:
+    image: ${DOCKER_REGISTRY-}conferenceattendeesapi
+    build:
+      context: .
+      dockerfile: ConferenceAttendees.API/Dockerfile
+    ports:
+        - "7293:7293"
+    environment:
+        - ASPNETCORE_URLS=http://*:7293
+  conferenceattendees.mvc:
+    image: ${DOCKER_REGISTRY-}conferenceattendeesmvc
+    build:
+      context: .
+      dockerfile: ConferenceAttendees.MVC/Dockerfile
+    ports:
+        - "7187:7187"
+    environment:
+        - ASPNETCORE_URLS=http://*:7187
+    depends_on:  
+        - conferenceattendees.api

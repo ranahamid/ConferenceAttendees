@@ -6,10 +6,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddScoped(sp=> new HttpClient
 {
-    BaseAddress = new Uri("http://conferenceattendees.api:7293")
+    //BaseAddress = new Uri("http://conferenceattendees.api:7293")
 
     // BaseAddress = new Uri("http://localhost:5269")
     // BaseAddress = new Uri("https://localhost:7293")
+
+    BaseAddress = new Uri("http://api.conferenceattendees.com:44391")
 });
 
 builder.Services.AddScoped<IClient, Client>();

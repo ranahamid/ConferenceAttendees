@@ -1,0 +1,6 @@
+dotnet sonarscanner begin   /o:"local-home"   /k:"local-home_inc"   /d:sonar.host.url="https://sonarcloud.io"   /d:sonar.token="48badb584e63e01db161691ac5b6c54407307f9a"
+
+dotnet build
+
+
+dotnet sonarscanner end /d:sonar.token="48badb584e63e01db161691ac5b6c54407307f9a"

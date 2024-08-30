@@ -6,8 +6,8 @@ services:
       dockerfile: ConferenceAttendees.API/Dockerfile
     ports:
         - "7293:7293"
-    environment:
-        - ASPNETCORE_URLS=http://*:7293
+  
+       
     depends_on:  [mssql,seq]
     networks:
       - app-network
@@ -20,8 +20,8 @@ services:
       dockerfile: ConferenceAttendees.MVC/Dockerfile
     ports:
         - "7187:7187"
-    environment:
-        - ASPNETCORE_URLS=http://*:7187
+ 
+       
     depends_on:  
         - conferenceattendees.api
     networks:

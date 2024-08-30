@@ -1,7 +1,7 @@
 services:
   conferenceattendees.api:
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=UAT
       - ASPNETCORE_URLS=http://*:7293
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
@@ -12,7 +12,7 @@ services:
 
   conferenceattendees.mvc:
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=UAT
       - ASPNETCORE_URLS=http://*:7187
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro

@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: conferenceattendeesmvc
-        image: trevoirwilliams/conferenceattendees-mvc:latest
+        image: ranahamid/conferenceattendees-mvc:latest
         ports:
         - containerPort: 80
         env:

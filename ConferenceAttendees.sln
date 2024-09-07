@@ -25,15 +25,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nginx", "nginx", "{9C40E9AF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "k8s", "k8s", "{340A1E9F-AD9E-4D3F-A020-A72600018A14}"
 	ProjectSection(SolutionItems) = preProject
-		k8s\api-deployment.yaml = k8s\api-deployment.yaml
 		k8s\ClusterRoleBinding.yaml = k8s\ClusterRoleBinding.yaml
+		k8s\api-deployment.yml = k8s\api-deployment.yml
 		k8s\dashboard-adminuser.yaml = k8s\dashboard-adminuser.yaml
 		k8s\ingress.yml = k8s\ingress.yml
-		k8s\mssql-deployment.yaml = k8s\mssql-deployment.yaml
-		k8s\mvc-client-deployment.yaml = k8s\mvc-client-deployment.yaml
+		k8s\mssql-deployment.yml = k8s\mssql-deployment.yml
 		k8s\namespace.yaml = k8s\namespace.yaml
+		k8s\mvc-client-deployment.yml = k8s\mvc-client-deployment.yml
 		k8s\persistence-volumes.yml = k8s\persistence-volumes.yml
-		k8s\seq-deployment.yaml = k8s\seq-deployment.yaml
+		k8s\seq-deployment.yml = k8s\seq-deployment.yml
 	EndProjectSection
 EndProject
 Global

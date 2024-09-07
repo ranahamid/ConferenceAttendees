@@ -5,7 +5,7 @@ metadata:
     name: conferenceattendeesapi
     namespace: cloud-native-dev
 spec:
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: conferenceattendeesapi
-        image: trevoirwilliams/conferenceattendees-api:latest
+        image: ranahamid/conferenceattendees-api:latest
         ports:
         - containerPort: 80
         env:
@@ -40,6 +40,7 @@ spec:
     nodePort: 32001
   selector:
     app: conferenceattendeesapi
+
 ---
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
@@ -51,7 +52,7 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: conferenceattendeesapi
-  minReplicas: 1
+  minReplicas: 2
   maxReplicas: 10
   metrics:
   - type: Resource
